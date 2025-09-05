@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block title %} posts {%endblock%}
+{% block content %}
+<form action="{{url_for('new_post')}}" method="post">
+    <label for="title">
+        title
+    </label>
+    <input type="text" name="title" ><br>
+    <label for="author">author</label>
+    <input type="text" name="author"><br>
+    <label for="content">content</label>
+    <textarea name="content" id="">content</textarea><br>
+    <button type="submit">submit</button>
+
+
+    
+
+
+</form>
+
+{%if errors%}
+<ul>
+
+    {% for h in errors%}
+      <li>{h}</li>
+      
+      {% endfor %}
+      
+      
+      
+    </ul>
+    {% endif %}
+
+
+
+
+
+
+
+
+
+
+{%endblock%}

@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}blogs{%endblock%}
+{% block content %}
+{% for h in posts %}
+<article>
+    <img src="{{ url_for('static', filename='images/shams.jpg') }}" alt="{{ h.title }}">
+    <h2>{{ h.title }}</h2>
+    <p>by {{ h.auther }}</p>
+    <p>{{ h.content }}</p>
+</article>
+<hr>
+{% endfor %}
+{%endblock%}

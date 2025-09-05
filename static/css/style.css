@@ -1,0 +1,36 @@
+img{
+    
+    width: 50px;
+    height: auto;
+    background-origin: padding-box;
+    border: 2px solid black;
+    border-radius: 50px;
+    border-radius: 50%;
+    
+    max-width: 100px;
+ box-shadow: 5px 5px 10px rgb(147, 107, 107); 
+   filter: grayscale(10%);
+   filter: blur(2px);
+   filter: brightness(120%);
+   margin: auto;
+   position:relative;
+   display:flex;
+   transition:all 0.5s ease ;
+
+
+    
+}
+img:hover{
+    transform: rotate(720deg) scale(2);
+    opacity: 99;
+    filter: grayscale(30%);
+
+}
+
+nav{
+
+    display: flex;
+    text-align: center;
+    background-color: aqua;
+}
+

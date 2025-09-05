@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}Contact Us{% endblock %}
+
+{% block content %}
+<h2>Contact Form</h2>
+<form action="{{ url_for('contact') }}" method="POST">
+    <label>Name:</label><br>
+    <input type="text" name="name" value="{{ name }}"><br><br>
+
+    <label>Email:</label><br>
+    <input type="text" name="email" value="{{ email }}"><br><br>
+
+    <label>Message:</label><br>
+    <textarea name="message">{{ message }}</textarea><br><br>
+
+    <button type="submit">Send</button>
+</form>
+
+{% if errors %}
+    <ul style="color:red;">
+    {% for error in errors %}
+        <li>{{ error }}</li>
+    {% endfor %}
+    </ul>
+{% endif %}
+{% endblock %}
